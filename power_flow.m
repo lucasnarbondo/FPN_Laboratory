@@ -6,9 +6,9 @@ L12=0.0262;
 R12=0.0103;
 L23=0.0262;
 R23=0.0358;
-P4=1;
+P4=0.42;
 Q4=0;
-P5=1;
+P5=0.42;
 Q5=0;
 w0=1;
 V0=1;
@@ -20,7 +20,7 @@ w01=1;
 V01=1;
 
 V_base=381;
-S_base=9073;
+S_base=10000;
 w_base=2*pi*50;
 
 %% Initialization
@@ -29,7 +29,7 @@ V1=1;
 V2=1;
 V3=1;
 w=1;
-epsilon=10e-6;
+epsilon=1e-6;
 delta_x=1;
 k=1;
 max_iter=100;
@@ -96,4 +96,4 @@ fprintf('S1 = %.1f%+.1fj\n',P1*S_base,Q1*S_base);
 fprintf('S2 = %.1f%+.1fj\n',P2*S_base,Q2*S_base);
 fprintf('S3 = %.1f%+.1fj\n',P3*S_base,Q3*S_base);
 fprintf('I12 = %.2f < %.2f\n',abs(I12)*I_base,angle(I12)*180/pi);
-fprintf('I23 = %.2f < %.2f\n',abs(I23)*V_base,angle(I23)*180/pi);
+fprintf('I23 = %.2f < %.2f\n',abs(I23)*I_base,angle(I23)*180/pi);
